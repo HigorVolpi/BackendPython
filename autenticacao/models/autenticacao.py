@@ -8,4 +8,4 @@ class Tabela_Usuarios(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     nome_usuario = Column(String, unique=True)
     senha = Column(String)
-    papel = Column(String) # admin, usuario
+    papel = Column(String, default="user")  # Pode ser "user" ou "admin
